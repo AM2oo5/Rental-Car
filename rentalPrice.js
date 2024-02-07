@@ -1,7 +1,23 @@
 
 function price(pickup, dropoff, pickupDate, dropoffDate, type, age) {
+
   const clazz = getClazz(type);
-  const days = get_days(pickupDate, dropoffDate);
+  
+  function getClazz(type) {
+  switch (type) {
+      case "Compact":
+  
+      case "Electric":
+          
+      case "Cabrio":
+         
+      case "Racer":
+          return "Racer";
+      default:
+          return "Unknown";
+  }
+}
+const days = get_days(pickupDate, dropoffDate);
   const season = getSeason(pickupDate, dropoffDate);
 
   if (age < 18) {
@@ -28,20 +44,6 @@ function price(pickup, dropoff, pickupDate, dropoffDate, type, age) {
   return '$' + rentalprice;
 }
 
-function getClazz(type) {
-  switch (type) {
-      case "Compact":
-          return "Compact";
-      case "Electric":
-          return "Electric";
-      case "Cabrio":
-          return "Cabrio";
-      case "Racer":
-          return "Racer";
-      default:
-          return "Unknown";
-  }
-}
 
 function get_days(pickupDate, dropoffDate) {
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
