@@ -71,6 +71,12 @@
             font-size: 16px;
             color: #007bff;
         }
+
+        .required-field::after {
+        content: "*";
+        color: red;
+        }
+
     </style>
 </head>
 <body>
@@ -89,16 +95,18 @@
             <label for="dropoff-date">Dropoff Date:</label>
             <input type="date" id="dropoff-date" name="dropoffdate" required>
 
+            <div class="formContainer">
             <label for="car-type">Car Type:</label>
-            <select id="car-type" name="type">
+            <select id="car-type" name="type" required>
                 <option value="compact">Compact</option>
-                <option value="Electric">Electric</option>
+                <option value="electric">Electric</option>
                 <option value="cabrio">Cabrio</option>
                 <option value="racer">Racer</option>
             </select>
+            </div>
 
-            <div class="form-group">
-                <label for="age">Diver's age</label>
+            <div class="formContainer">
+                <label for="age">Driver's age:</label>
                 <input type="number" class="form-control" name="age" required/>
             </div>
 
