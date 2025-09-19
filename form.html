@@ -79,24 +79,27 @@
 
     </style>
 </head>
+
 <body>
     <div class="formContainer">
         <h1>Car Rental Booking Form</h1>
         <form id="calcForm" method="post" action="http://localhost:3000">
-            <label for="pickup-location" class="required-field">Pickup Location:</label>
+
+            <label for="pickup-location" class="required-field">Pickup Location: </label>
             <input type="text" id="pickup-location" name="pickup" required>
     
-            <label for="dropoff-location">Dropoff Location:</label>
+            <label for="dropoff-location"class="required-field">Dropoff Location: </label>
             <input type="text" id="dropoff-location" name="dropoff" required>
 
-            <label for="pickup-date">Pickup Date:</label>
+            <label for="pickup-date" class="required-field">Pickup Date: </label>
             <input type="date" id="pickup-date" name="pickupdate" required>
     
-            <label for="dropoff-date">Dropoff Date:</label>
+            <label for="dropoff-date" class="required-field">Dropoff Date: </label>
             <input type="date" id="dropoff-date" name="dropoffdate" required>
 
-            <div class="formContainer">
-            <label for="car-type">Car Type:</label>
+            <div class="form-group">
+                
+            <label for="car-type" class="required-field">Car Type: </label>
             <select id="car-type" name="type" required>
                 <option value="compact">Compact</option>
                 <option value="electric">Electric</option>
@@ -105,9 +108,9 @@
             </select>
             </div>
 
-            <div class="formContainer">
-                <label for="age">Driver's age:</label>
-                <input type="number" class="form-control" name="age" required/>
+            <div class="form-group">
+                <label for="age" class="required-field">Driver's age: </label>
+                <input type="number" class="form-control" name="age" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Search</button>
